@@ -1,5 +1,5 @@
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 7, 8, 9, 10]
-arr.sort()  # Binary search requires sorted array
+arr.sort()  
 print("Sorted array:", arr)
 
 target = int(input("Enter the Element you want to search: "))
