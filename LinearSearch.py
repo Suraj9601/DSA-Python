@@ -5,7 +5,7 @@ target = input("Enter element you want to search : ")
 def linear (arr, target) : 
     for i in range(len(arr)):
         if arr[i] == target:
-            print("Element is Found at",i+1, "Position.")
+            print("Element found at index:",i)
             return
         
     print("Element not found.")
