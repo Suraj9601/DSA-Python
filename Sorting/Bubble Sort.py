@@ -1,3 +1,4 @@
+# Time Complexity is O(n²)
 def bubbleSort(arr):
     n = len(arr)
     for i in range(n):
