@@ -11,4 +11,3 @@ print("Original array:",arr)
 
 sorted_arr = bubbleSort(arr)
 print("Sorted array : ",sorted_arr)
-
