@@ -65,3 +65,22 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+Dear Student and Teachers, 
+We are members of Board of Studies Computer Engineering, 
+are very happy to present Second Year Computer Engineering
+
+'''
