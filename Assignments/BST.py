@@ -1,5 +1,4 @@
 # Binary Search Tree Implementation
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -7,7 +6,6 @@ class Node:
         self.right = None
 
 
-# Insert a new node
 def insert(root, data):
     if root is None:
         return Node(data)
@@ -18,7 +16,6 @@ def insert(root, data):
     return root
 
 
-# Search a value in BST
 def search(root, key):
     if root is None:
         return False
@@ -30,7 +27,6 @@ def search(root, key):
         return search(root.right, key)
 
 
-# Find the minimum value node
 def min_value_node(node):
     current = node
     while current.left:
@@ -38,7 +34,6 @@ def min_value_node(node):
     return current
 
 
-# Delete a node
 def delete(root, key):
     if root is None:
         return root
@@ -53,15 +48,12 @@ def delete(root, key):
         elif root.right is None:
             return root.left
 
-        # Node with two children
         temp = min_value_node(root.right)
         root.data = temp.data
         root.right = delete(root.right, temp.data)
-
     return root
 
 
-# Display (Inorder Traversal)
 def inorder(root):
     if root:
         inorder(root.left)
@@ -69,7 +61,6 @@ def inorder(root):
         inorder(root.right)
 
 
-# --- MAIN PROGRAM ---
 root = None
 
 while True:

@@ -1,28 +1,25 @@
 # Hash Table using Linear Probing
 
-SIZE = 10  # Fixed size of hash table
-hash_table = [None] * SIZE  # Initialize table with None
+SIZE = 10
+hash_table = [None] * SIZE
 
 
-# Hash Function
 def hash_function(key):
     return key % SIZE
 
 
-# Insert Operation
 def insert(key):
     index = hash_function(key)
     original_index = index
     while hash_table[index] is not None:
         index = (index + 1) % SIZE
-        if index == original_index:  # Full table
+        if index == original_index:
             print("Hash table is full! Cannot insert.")
             return
     hash_table[index] = key
     print(f"Inserted key {key} at index {index}")
 
 
-# Search Operation
 def search(key):
     index = hash_function(key)
     original_index = index
@@ -36,7 +33,6 @@ def search(key):
     print(f"Key {key} not found!")
 
 
-# Delete Operation
 def delete(key):
     index = hash_function(key)
     original_index = index
@@ -51,7 +47,6 @@ def delete(key):
     print(f"Key {key} not found! Cannot delete.")
 
 
-# Display Operation
 def display():
     print("\nCurrent Hash Table:")
     for i in range(SIZE):
@@ -59,7 +54,6 @@ def display():
     print()
 
 
-# Menu-driven Program
 while True:
     print("\n==== Hash Table Menu ====")
     print("1. Insert Key")

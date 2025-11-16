@@ -1,9 +1,12 @@
-customer_ids = [101, 502, 303, 404, 505, 606, 707, 808, 909]
+customer_ids = [101, 202, 303, 404, 505, 606, 707, 808, 909, 110]
+print(customer_ids)
+n = len(customer_ids)
+
 target = int(input("Enter the customer ID to search: "))
 
 # Linear Search
 def linear_search(customer_ids, target):
-    for i in range(len(customer_ids)):
+    for i in range(n):
         if customer_ids[i] == target:
             return i
     return -1
@@ -12,7 +15,8 @@ def linear_search(customer_ids, target):
 # Binary Search
 def binary_search(customer_ids, target):
     customer_ids = sorted(customer_ids)
-    left, right = 0, len(customer_ids) - 1
+    left = 0
+    right = n - 1
     while left <= right:
         mid = (left + right) // 2
         if customer_ids[mid] == target:
